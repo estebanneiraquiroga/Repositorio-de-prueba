@@ -1,0 +1,19 @@
+Comandos de interés con git:
+
+    - "ls": para ver los diferentes archivos y folders que hay en la ruta actual
+    - "ls -a": nos permite ver el también los archivos o folders ocultos, por lo que si apuntamos a un folder con repositorio, aparecerá la carpeta "git"
+    - "pwd": nos indica la ruta actual en la que nos encontramos
+    - "cd <nombre_directorio>": nos ayuda a apuntar a un directorio contenido en la ruta actual que tenemos
+    - "cd ..": nos hace ir hacia atrás (aumentar el nivel de jerarquía), es decir, nos hace apuntar al directorio superior que contiene el directorio al que apuntamos
+    - "mkdir <nomobre_nuevo_directorio>": nos ayuda a crear un directorio en la ruta actual en la que estamos
+    - "git add <nombre_archivo": para pasar los cambios referidos a ese archivo de estado crudo a stage [si en vez del nombre ponemos <*.txt>, añadirá los cambios que tengan esta extensión; usamos <.> para pasar todos los crudos a estado de Stage]
+    - "git commit -m "<Nombre_del_commit>": pasamos los cambios del estado stage a estado commit, he indicamos el nombre que hace referencia a todo ese conjunto de cambios
+Conceptos a tener en cuenta:
+
+    - Estados de los cambios: cambios son toda aquella información nueva, desde nuevos caracteres como eliminación de los mismos. Estos cambios solo pueden estar en
+    en un estado al mismo tiempo.
+        *Estado crudo: son camios recién hechos, toda información nueva que borremos o eliminemos, en ese mismo instante estarán en estado de crudo
+        *Estado stage: en este estado, solo dejaremos que lo adquieran los cambios que queremos que aparezcan en nuestro repositorio, es decir, queremos conservarlos o guardarlos
+        *Estado commit: son ya cambios comprometido en el sentido que dejamos constancia en nuestro ordenador local de su presencia y por ende, van a quedar registrados
+        mientras exista el repositorio.
+        *Estado server: esto ocurre de la misma manera, pero estos cambios quedan registrados en un servidor y son accesibles de manera remota, por uno o varios usuarios.
