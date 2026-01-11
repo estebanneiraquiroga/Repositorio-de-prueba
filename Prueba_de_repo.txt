@@ -14,7 +14,11 @@ Comandos de interés con git:
     - "git commit -m "<Nombre_del_commit>": pasamos los cambios del estado stage a estado commit, he indicamos el nombre que hace referencia a todo ese conjunto de cambios
     - "mv <nombre_archivo_a_cambiar_de_nombre> <nuevo_nombre>": sirve para cambiar el nombre de un archivo o folder (*1)
     - "git mv <nombre_archivo_a_cambiar_de_nombre> <nuevo_nombre>": es la versión de git de mv que realiza los stages automáticos de los dos cambios (*1)
-
+    - "git diff": nos permite ver los cambios que tenemos pendientes de pasar a stage. Estos cambios no solo hacen referencia a los archivos con cambios, si no que, 
+    muestran directamente los cambios que hay en dichos archivos.
+    - "git diff --staged": esto es lo mismo, pero nos saldrán los cambios que ya están en la etapa de stage
+    - "git log": nos enseña el historico de commits de la rama a la que apuntamos
+    - "git log --oneline": es lo mismo, pero es un resumen más escueto y más ordenado de la versión simple
 
 
 
@@ -34,5 +38,8 @@ Conceptos a tener en cuenta:
     -".gitignore": es un archivo usuado para definir los archivos y folders que no se desean ser rastreados por git, es decir, si hay un cambio crudo en estos, git no nos indicará que 
     hay cambios por pasar a stage, simplemente, no los detecta, y aunque hagamos un "git add .", se añadirán los cambios a stage que git ve, pero los archivos y folders designados en 
     .gitignore no se "stagearán". Esta herramienta es un archivo de texto, en el cual definimos los folders y archivos a ignorar, incluso podemos definir todos los archivos que tengan
-    una extensión en concreto. La propia creación de este archivo es también invisible para el rastreo de git.
+    una extensión en concreto. La propia creación de este archivo si es visible para git, por lo que la creación y cambios en este si son cambios trackeables.
+
+    -
+    
 
