@@ -6,8 +6,18 @@ Comandos de interés con git:
     - "cd <nombre_directorio>": nos ayuda a apuntar a un directorio contenido en la ruta actual que tenemos
     - "cd ..": nos hace ir hacia atrás (aumentar el nivel de jerarquía), es decir, nos hace apuntar al directorio superior que contiene el directorio al que apuntamos
     - "mkdir <nomobre_nuevo_directorio>": nos ayuda a crear un directorio en la ruta actual en la que estamos
+    - "rm <nombre_archivo>": se utiliza para eliminar el archivo o folder indicando su nombre
+    - "git rm <nombre_del_archivo>": elimina el archivo o folder indicado y además pasa estos cambios crudos al estado de stage
+    - "git restore --staged <nombre_del_archivo>: este comando permite sacar los cambios de un archivo o folder de la etapa de stage y devolverlos a la etapa de cambios crudos
+    - "git restore <nombre_del_archivo": este comando permite eliminar el cambio crudo, es decir, si teníamos una versión limpia y realizamos cambios crudos, nos los elimina
     - "git add <nombre_archivo": para pasar los cambios referidos a ese archivo de estado crudo a stage [si en vez del nombre ponemos <*.txt>, añadirá los cambios que tengan esta extensión; usamos <.> para pasar todos los crudos a estado de Stage]
     - "git commit -m "<Nombre_del_commit>": pasamos los cambios del estado stage a estado commit, he indicamos el nombre que hace referencia a todo ese conjunto de cambios
+    - "mv <nombre_archivo_a_cambiar_de_nombre> <nuevo_nombre>": sirve para cambiar el nombre de un archivo o folder (*1)
+    - "git mv <nombre_archivo_a_cambiar_de_nombre> <nuevo_nombre>": es la versión de git de mv que realiza los stages automáticos de los dos cambios (*1)
+
+
+
+
 Conceptos a tener en cuenta:
 
     - Estados de los cambios: cambios son toda aquella información nueva, desde nuevos caracteres como eliminación de los mismos. Estos cambios solo pueden estar en
@@ -17,3 +27,12 @@ Conceptos a tener en cuenta:
         *Estado commit: son ya cambios comprometido en el sentido que dejamos constancia en nuestro ordenador local de su presencia y por ende, van a quedar registrados
         mientras exista el repositorio.
         *Estado server: esto ocurre de la misma manera, pero estos cambios quedan registrados en un servidor y son accesibles de manera remota, por uno o varios usuarios.
+
+    - (*1) Los cambios en git van referenciados a nombres, es decir, cuando creamos un archivo, todo los cambios que hagamos en él, serán referenciados a ese mismo archivo con su nombre, 
+    en caso de cambiar su nombre, git interpretará que el archivo fue eliminado y que se ha creado otro de la nada, osea, se consideran dos cambios.
+
+    -".gitignore": es un archivo usuado para definir los archivos y folders que no se desean ser rastreados por git, es decir, si hay un cambio crudo en estos, git no nos indicará que 
+    hay cambios por pasar a stage, simplemente, no los detecta, y aunque hagamos un "git add .", se añadirán los cambios a stage que git ve, pero los archivos y folders designados en 
+    .gitignore no se "stagearán". Esta herramienta es un archivo de texto, en el cual definimos los folders y archivos a ignorar, incluso podemos definir todos los archivos que tengan
+    una extensión en concreto. La propia creación de este archivo es también invisible para el rastreo de git.
+
