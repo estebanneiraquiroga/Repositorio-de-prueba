@@ -21,6 +21,10 @@ Comandos de interés con git:
     - "git log --oneline": es lo mismo, pero es un resumen más escueto y más ordenado de la versión simple
     - "git branch": nos muesta las ramas contenidas y abiertas en nuestro repositorio, así como la rama actual en la que estamos trabajando
     - "git checkout -b <nombre_de_la_rama_a_crear>": nos ayuda a crear una rama nueva y automáticamente nos desplazamos a dicha rama que creamos
+    - "git merge <nombre_de_la_rama_a_traer>: este comando traer los cambios relativos a la rama indicada con respecto a la rama a la cual apuntamos en ese momento,
+    a esta misma rama, es decir, si estamos en "main" y existen diferencias de esta con respecto a la rama "rama2", y queremos traer estos cambios (diff), haremos
+    git merge rama2 (mientras que nuestra rama actual sea main), esto aplicará las diferencias a nuestra rama "main" y no haría falta pasarlos a "stage", o commitearlos, 
+    ya estos cambios se suben automáticamente al repo.
 
 
 
