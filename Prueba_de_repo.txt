@@ -25,7 +25,15 @@ Comandos de interés con git:
     a esta misma rama, es decir, si estamos en "main" y existen diferencias de esta con respecto a la rama "rama2", y queremos traer estos cambios (diff), haremos
     git merge rama2 (mientras que nuestra rama actual sea main), esto aplicará las diferencias a nuestra rama "main" y no haría falta pasarlos a "stage", o commitearlos, 
     ya estos cambios se suben automáticamente al repo.
-
+    - "git remote add origin <direccion_http_repositorio>": esta sería una manera haber creado un repositorio en GitHub y hacer un linkado entre nuestro repositorio local
+    y el repositorio que tenemos en GitHub. Entiendo que este repositorio debería de estar vacío para poder hacer el linkado.
+    - "git push -u origin <nombre_de_la_rama_a_subir>": para evitar sopresas, lo suyo sería escribir el nombre de la rama en la cual estamos en ese momento. El símbolo "-u" 
+    lo que indica es que, conociendo que esa rama no existe en el repositorio remoto, la creará y alojará nuestro push en ella.
+    - "git fetch": sirve para traer información actualizada del repositorio remoto, lo cual nos ayuda a conocer las distintas ramas que hay, los últimos commits...
+    - "git pull <nombre_del_remoto> <nombre_de_la_rama_de_remoto_a_traer>": si tenemos la misma rama en local, pero está atrasada en commits, pues hay dos opciones, que no 
+    tengamos en local nuevos cambios, lo cual lo que nos hace es un merge sin conflictos y que no deja huella, es decir, simplemente actualiza nuestra rama local al último 
+    commit remoto, mientras que si tenemos cambios, hará un merge que puede que tenga conflictos o no, pero si dejará huella de que se ha realizado un merge en el histórico
+    del "log". En caso de haber conflictos será el visual studio el que nos ayude a resolverlos.
 
 
 Conceptos a tener en cuenta:
@@ -47,6 +55,9 @@ Conceptos a tener en cuenta:
     una extensión en concreto. La propia creación de este archivo si es visible para git, por lo que la creación y cambios en este si son cambios trackeables. Estos archivos
     ocultos son ocultos solo para git, en el caso de realizar un "ls", pues aparecerán los archivos que son ocultos para git también.
 
-    -
+    - El main local es local a secas, y tiene información referida a su situación actual local, pero si tratamos con  "origin main" estaríamos hablando de las últimas condiciones del 
+    main remoto que conocemos localmente, estén presentes o no en mi repositorio local.
+
+    -Primera aplicación de los stashes. No entiendo por que no se registran cambios.
     
 
