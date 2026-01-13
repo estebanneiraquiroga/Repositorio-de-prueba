@@ -19,6 +19,8 @@ Comandos de interés con git:
     - "git diff --staged": esto es lo mismo, pero nos saldrán los cambios que ya están en la etapa de stage
     - "git log": nos enseña el historico de commits de la rama a la que apuntamos
     - "git log --oneline": es lo mismo, pero es un resumen más escueto y más ordenado de la versión simple
+    - "git branch": nos muesta las ramas contenidas y abiertas en nuestro repositorio, así como la rama actual en la que estamos trabajando
+    - "git checkout -b <nombre_de_la_rama_a_crear>": nos ayuda a crear una rama nueva y automáticamente nos desplazamos a dicha rama que creamos
 
 
 
@@ -38,7 +40,8 @@ Conceptos a tener en cuenta:
     -".gitignore": es un archivo usuado para definir los archivos y folders que no se desean ser rastreados por git, es decir, si hay un cambio crudo en estos, git no nos indicará que 
     hay cambios por pasar a stage, simplemente, no los detecta, y aunque hagamos un "git add .", se añadirán los cambios a stage que git ve, pero los archivos y folders designados en 
     .gitignore no se "stagearán". Esta herramienta es un archivo de texto, en el cual definimos los folders y archivos a ignorar, incluso podemos definir todos los archivos que tengan
-    una extensión en concreto. La propia creación de este archivo si es visible para git, por lo que la creación y cambios en este si son cambios trackeables.
+    una extensión en concreto. La propia creación de este archivo si es visible para git, por lo que la creación y cambios en este si son cambios trackeables. Estos archivos
+    ocultos son ocultos solo para git, en el caso de realizar un "ls", pues aparecerán los archivos que son ocultos para git también.
 
     -
     
