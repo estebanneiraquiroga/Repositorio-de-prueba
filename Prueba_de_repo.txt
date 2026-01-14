@@ -59,5 +59,7 @@ Conceptos a tener en cuenta:
     main remoto que conocemos localmente, estén presentes o no en mi repositorio local.
 
     -Primera aplicación de los stashes. No entiendo por que no se registran cambios.
+
+    - Hola cambio.
     
 
